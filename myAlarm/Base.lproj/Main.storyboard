@@ -18,27 +18,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="alarmCell" rowHeight="63" id="U4r-UL-nav" customClass="SwitchTableViewCell" customModule="myAlarm" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="63"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="alarmCell" rowHeight="88" id="U4r-UL-nav" customClass="SwitchTableViewCell" customModule="myAlarm" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U4r-UL-nav" id="Hhz-HN-vlR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="62.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="217" translatesAutoresizingMaskIntoConstraints="NO" id="YPM-c2-rsV">
-                                            <rect key="frame" x="16" y="11" width="343" height="41"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YPM-c2-rsV">
+                                            <rect key="frame" x="16" y="11" width="343" height="66"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="7ac-Bw-4CJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="77" height="41"/>
+                                                    <rect key="frame" x="0.0" y="12" width="286" height="42"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4n-WA-sSn">
-                                                            <rect key="frame" x="0.0" y="0.0" width="77" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4n-WA-sSn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFB-Lz-uP7">
-                                                            <rect key="frame" x="0.0" y="21.5" width="77" height="19.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFB-Lz-uP7">
+                                                            <rect key="frame" x="0.0" y="21.5" width="286" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5NH-z5-X9p">
-                                                    <rect key="frame" x="294" y="0.0" width="51" height="41"/>
+                                                    <rect key="frame" x="294" y="17.5" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="switchValueChanged:" destination="U4r-UL-nav" eventType="valueChanged" id="1HM-mC-dUw"/>
                                                     </connections>
@@ -65,7 +65,7 @@
                                     <outlet property="alarmSwitch" destination="5NH-z5-X9p" id="V9s-Im-ViS"/>
                                     <outlet property="nameLabel" destination="CFB-Lz-uP7" id="WpX-pD-yUi"/>
                                     <outlet property="timeLabel" destination="d4n-WA-sSn" id="2rP-0r-EN5"/>
-                                    <segue destination="LIw-FA-Xib" kind="show" id="bpG-mp-Oh3"/>
+                                    <segue destination="LIw-FA-Xib" kind="show" identifier="AlarmDetailTableViewController" id="bpG-mp-Oh3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -77,7 +77,7 @@
                     <navigationItem key="navigationItem" id="fv4-ae-iYo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="s1H-ng-YyN">
                             <connections>
-                                <segue destination="LIw-FA-Xib" kind="show" id="fKK-fr-AwW"/>
+                                <segue destination="LIw-FA-Xib" kind="show" id="f0o-Xb-yV1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -86,7 +86,7 @@
             </objects>
             <point key="canvasLocation" x="1120.8" y="198.35082458770617"/>
         </scene>
-        <!--Alarm Detail Table View Controller-->
+        <!--Title-->
         <scene sceneID="Jt5-eH-8EV">
             <objects>
                 <tableViewController id="LIw-FA-Xib" customClass="AlarmDetailTableViewController" customModule="myAlarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,16 +131,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rise and shine" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9XJ-Ra-iq9">
-                                                    <rect key="frame" x="16" y="3" width="343" height="30"/>
+                                                    <rect key="frame" x="16" y="11" width="343" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="9XJ-Ra-iq9" secondAttribute="bottom" id="4cz-6n-CAg"/>
-                                                <constraint firstItem="9XJ-Ra-iq9" firstAttribute="leading" secondItem="z5F-Wv-gxq" secondAttribute="leadingMargin" id="JXZ-VF-qL6"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="9XJ-Ra-iq9" secondAttribute="trailing" id="PuF-5k-tgw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9XJ-Ra-iq9" secondAttribute="trailing" id="4Fs-iB-aii"/>
+                                                <constraint firstItem="9XJ-Ra-iq9" firstAttribute="leading" secondItem="z5F-Wv-gxq" secondAttribute="leadingMargin" id="PyM-WM-3fx"/>
+                                                <constraint firstItem="9XJ-Ra-iq9" firstAttribute="bottom" secondItem="z5F-Wv-gxq" secondAttribute="bottomMargin" id="ThD-aP-ara"/>
+                                                <constraint firstItem="9XJ-Ra-iq9" firstAttribute="top" secondItem="z5F-Wv-gxq" secondAttribute="topMargin" id="sxd-RI-hUn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -155,16 +156,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyv-XE-lgS">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyv-XE-lgS">
                                                     <rect key="frame" x="16" y="11" width="343" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.76404246789999997" green="0.15435234959999999" blue="0.01854503641" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
-                                                    <state key="normal" title="Disable">
+                                                    <state key="normal" title="Off">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="enableButtonTapped:" destination="LIw-FA-Xib" eventType="touchUpInside" id="yzu-Ku-DZD"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Yyv-XE-lgS" firstAttribute="centerY" secondItem="DaR-o4-4HR" secondAttribute="centerY" id="UZa-2u-q8I"/>
+                                                <constraint firstItem="Yyv-XE-lgS" firstAttribute="centerX" secondItem="DaR-o4-4HR" secondAttribute="centerX" id="VnX-la-cn4"/>
+                                                <constraint firstItem="Yyv-XE-lgS" firstAttribute="width" secondItem="DaR-o4-4HR" secondAttribute="width" multiplier="0.5" id="XU0-m4-J1M"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -175,7 +183,15 @@
                             <outlet property="delegate" destination="LIw-FA-Xib" id="GXk-4v-Tzs"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="s8w-5i-gMp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="arH-h8-Udb">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="LIw-FA-Xib" id="gXB-Vs-myd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="enableButton" destination="Yyv-XE-lgS" id="016-VM-VVh"/>
                         <outlet property="nameAlarmLabel" destination="9XJ-Ra-iq9" id="XQp-Hz-c8h"/>
                         <outlet property="timeAndDatePicker" destination="I6Y-e5-rLb" id="aDf-Sz-cMQ"/>
                     </connections>
@@ -204,6 +220,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fKK-fr-AwW"/>
+        <segue reference="bpG-mp-Oh3"/>
     </inferredMetricsTieBreakers>
 </document>
